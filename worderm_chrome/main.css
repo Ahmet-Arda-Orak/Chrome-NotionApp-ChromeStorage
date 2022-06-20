@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Titillium+Web:wght@300&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ /* width */
+::-webkit-scrollbar {
+   width: 10px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #ccc; 
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: #aaa; 
+ }
+ 
+ body {
+   padding: 10px;
+    width: 800px;
+    margin: 0 auto;
+    /* background-color: #222; */
+ }
+
+ .header_exp{
+   font-size: 25px;
+   color: #161925;
+   padding-left: 10px;
+ }
+ span{
+   font-size: 12px;
+   color: #161925;
+ }
+.random_word_box{
+   background-color: #161925;
+   border-radius: 5px;
+   margin: 10px;
+   padding: 10px;
+}
+ .random_word{
+   text-align: center;
+   width: 350px;
+   font-size: 25px;
+   text-align: center;
+   color: #fff;
+   text-transform: uppercase;
+ }
+ .random_mean{
+   text-align: center;
+   color: #fff;
+   text-transform: capitalize;
+ }
+ 
+
+ .upper{
+    padding: 5px;
+    border-bottom: 0.01px solid hsl(0, 0%, 83%) ;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: #222;
+ }
+ .logo{
+     width: 90px;
+ }
+ 
+ .container {
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .todo_form {
+    margin: 10px;
+ }
+.huge_box{
+   display: flex;
+   flex-direction: row;
+}
+ 
+ .todo_input {
+    /* background-color: rgb(54, 52, 52); */
+    border-radius: 5px 5px 0px 0px;
+    background-color: rgb(241, 241, 241);
+    color: #222;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.mean_input {
+   /* background-color: rgb(54, 52, 52); */
+   background-color: rgb(241, 241, 241);
+   color: #222;
+   padding: 6px 8px;
+   font-size: 0.9rem;
+   border: none;
+   outline: none;
+   width: 100%;
+}
+ 
+ .todo_btn {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-radius: 0 0px 5px 5px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: azure;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    width: 100%;
+    text-align: center;
+    background-color: #161925;
+ }
+ 
+ .todo_btn:hover {
+    background-color: "";
+ }
+ 
+ .todo_container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    margin: 10px;
+    overflow-y: scroll;
+    width: 450px;
+    height: 450px;
+    background-image: url("./icons/task_bg.png");
+    background-size: cover;
+}
+ 
+ .todo {   
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 6px 0;
+    border-bottom: 1px solid hsl(0, 0%, 83%);
+    /* color: white; */
+ }
+ 
+ .todo:last-child { 
+    border: none;
+ }
+ 
+ .todo_left {
+   width: 70%;
+ }
+ 
+ .todo_editInput {
+   display: none;
+   position: relative;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+ }
+ .todo_editInputMean{
+   display: none;
+   position: relative;
+   padding: 6px 8px;
+   font-size: 0.9rem;
+   border-radius: 4px 0 0 4px;
+   border: none;
+   outline: none;
+   opacity: 0;
+   pointer-events: none;
+   float: left;
+ }
+ 
+ .todo_text{
+   font-size: 12px;
+    margin-left: 4px;
+    color: #161925;
+    font-weight: bold;
+    padding: 0px 3px;
+    border-radius: 3px;
+    /* background-color: #161925; */
+ }
+ .todo_mean{
+    font-size: 12px;
+    margin-left: 4px;
+    color: grey;
+    padding: 4px;
+    border-radius: 3px;
+ }
+
+ .todo_edit{
+   margin-left: 4px;
+   background-color: #161925;
+   color: #fff;
+}
+
+.hide{
+   display: none;
+}
+
+ /* ==================================================== */
+ .todo_cb{
+    display: none;
+ }
+ /* ==================================================== */
+ .todo_cb:checked ~ .todo_text {
+    text-decoration: line-through;
+    color: gray;
+ }
+ 
+ .todo_right {
+    position: relative;
+ }
+ 
+ .todo_delete {
+    background-color: crimson; 
+    padding: 0px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    border-radius: 4px 4px;
+ }
+ 
+ .todo_delete:hover {
+    background-color: crimson;
+    color: white;
+ }
+ 
+ .todo_edit {
+    /* background-color: #222; */
+    padding: 0px;
+    font-size: 0.9rem;
+    /* color: white; */
+    border-radius: 4px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    font-size: 12px;
+ }
+ 
+ .todo_edit:hover {
+    background-color: #161925;
+    color: white;
+ }
+ 
+ .mean_edit{
+    padding: 0px;
+    margin-right: 2px;
+    color: #fff;
+    background-color: #161925;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+ }
+
+ .todo_save {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: rgb(61, 164, 224);
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 4px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    opacity: 0;
+    pointer-events: none;
+ }
+ .mean_save {
+   position: absolute;
+   top: 0px;
+   right: 0;
+   background-color: rgb(61, 164, 224);
+   padding: 6px 8px;
+   font-size: 0.9rem;
+   color: white;
+   border-radius: 4px 4px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: 0.3s ease all;
+   opacity: 0;
+   pointer-events: none;
+}
+ 
+ .todo_save:hover {
+    background-color: rgb(65, 147, 194);
+ }
+ 
+ .todo.-edited .todo_left *, .todo.-edited .todo_right * {
+    opacity: 0;
+    pointer-events: none;
+ }
+ 
+ .todo.-edited .todo_left .todo_editInput, .todo.-edited .todo_right .todo_save {
+   display: block;
+    opacity: 1;
+    pointer-events: all;
+ }
+
+.todo.-edited2 .todo_left *, .todo.-edited2 .todo_right *{
+   opacity: 0;
+   pointer-events: none;
+}
+
+.todo.-edited2 .todo_editInputMean, .todo.-edited2 .mean_save {
+   display: block;
+   opacity: 1;
+   pointer-events: all;
+}
+
+
+ 
+ .premium{
+    width: 100%;
+    color: #161925;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+   outline: none;
+   border: none;
+
+   margin: 10px auto;
+   transition: 0.5s ease all;
+ }
+ .premium:hover{
+    background-color: #161925;
+   color: #fff;
+ }

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name":"Dict.io",
+    "version":"1.1.0",
+    "description":"Create your own dictionary while reading on the web!",
+    "icons":{
+        "128":"./icons/128x128.png",
+        "32":"./icons/32x32.png",
+        "16":"./icons/16x16.png"
+    },
+    "action":{
+        "default_icon":"./icons/16x16.png",
+        "default_popup":"./popup.html"
+    },
+    "background":{
+        "service_worker":"popup-script.js"
+    }
+}
